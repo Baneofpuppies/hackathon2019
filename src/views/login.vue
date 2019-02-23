@@ -1,5 +1,7 @@
 <template>
-  <div class="home">
+  <div>
+      login view
+
   </div>
 </template>
 

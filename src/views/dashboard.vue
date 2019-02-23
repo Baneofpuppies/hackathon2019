@@ -1,5 +1,6 @@
 <template>
-  <div class="home">
+  <div>
+      This is your dashboard
   </div>
 </template>
 
