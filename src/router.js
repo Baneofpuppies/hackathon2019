@@ -4,6 +4,7 @@ import Dashboard from './views/dashboard.vue'
 import Document from './views/document.vue'
 import Login from './views/login.vue'
 import SuccessPage from './views/success.vue'
+import Store from './store.js'
 
 
 Vue.use(Router)
@@ -20,7 +21,14 @@ export default new Router({
     {
       path: '/dashboard',
       name: 'dashboard',
-      component: Dashboard
+      component: Dashboard,
+      beforeEnter: function (to, from, next) {
+        if (Store.state.userToken) {
+          next()
+        } else {
+          next('/')
+        }
+      }
     },
     {
       path: '/editDocument',

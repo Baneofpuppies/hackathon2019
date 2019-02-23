@@ -5,7 +5,14 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    userId: null,
+    userToken: null
 
+  },
+  getters: {
+    isAuthenticated: function (state) {
+      return state.userToken
+    }
   },
   mutations: {
 
