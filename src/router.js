@@ -5,7 +5,7 @@ import Document from './views/document.vue'
 import Login from './views/login.vue'
 import SuccessPage from './views/success.vue'
 import Store from './store.js'
-
+import TestPage from './views/testpage.vue'
 
 Vue.use(Router)
 
@@ -44,6 +44,11 @@ export default new Router({
       path: '/success',
       name: 'success',
       component: SuccessPage
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: TestPage
     }
   ]
 })

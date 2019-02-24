@@ -18,6 +18,10 @@ export default new Vuex.Store({
 
   },
   actions: {
+    getusbdevices: function () {
+      var devices = navigator.usb.requestDevice
+      console.log(devices)
+    }
 
   }
 })
